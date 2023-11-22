@@ -1,0 +1,362 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+   
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+   
+   
+  /*
+    AppBar
+  */
+   
+  .app-bar {
+    padding: 8px 16px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  }
+   
+  .app-bar .app-bar__menu {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__menu button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    padding: 8px;
+    cursor: pointer;
+  }
+   
+  .app-bar .app-bar__brand {
+    display: flex;
+    align-items: center;
+  }
+   
+  .app-bar .app-bar__brand h1 {
+    color: #F05941;
+    text-transform: uppercase;
+    font-size: 22px;
+    user-select: none;
+  }
+   
+  .app-bar .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s;
+    padding: 8px;
+    background-color: white;
+    overflow: hidden;
+  }
+   
+  .app-bar .app-bar__navigation.open {
+    left: 0;
+  }
+   
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #240e0b;
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .hero {
+    text-align: center;
+    padding: 10px;
+    background-color: #FFBB5C;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.hero img {
+    max-width: 100%;
+    max-height: 475px;
+    margin-left: 50px;
+    margin-right: 100px; 
+    padding: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #F05941;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+.explore-button a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.explore-button:hover {
+    background-color: #C63D2F;
+}
+.article-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-header {
+    text-align: center;
+    margin-top: 20px;
+}
+.article-header h1{
+    color: #F05941;
+    font-size: 15px;
+}
+.article-header p {
+    max-width: 400px;
+    overflow: hidden;
+    color: #333;
+    font-size: 15px;
+    
+}
+.article-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.article-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.article-card .card-item {
+    position: relative;
+    width: 300px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; 
+}
+
+.card-item:hover {
+    transform: scale(1.05); 
+}
+
+.card-item a {
+    text-decoration: none;
+    color: #F05941;
+    font-size: 20px;
+    font-weight: bolder;
+}
+  /*
+ Kesenian
+*/
+.kesenian-header {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kesenian-header h1 {
+    color: #F05941;
+    font-size: 15px;
+}
+
+.kesenian-header p {
+    max-width: 600px;
+    overflow: hidden;
+    color: #333;
+    font-size: 15px;
+    text-align: center; /* Tambahkan properti text-align: center */
+}
+  /*
+  Footer
+*/
+ 
+footer {
+    padding: 16px;
+  }
+   
+footer p {
+    text-align: center;
+    color: #aaaaaa;
+  }
+
+  /*
+  artikel 1*/
+  section {
+    border: 1px solid #ddd;
+    border-radius: 8px; 
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    max-width: 600px;
+    margin: 20px auto; 
+  }
+  
+  h1, h2, p, img {
+    margin-bottom: 15px;
+  }
+  
+  h1{
+    color: #F05941;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .article-image {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .article-image:hover {
+    transform: scale(1.1); 
+  }
+
+  @media only screen and (max-width: 320px) {
+    .app-bar .app-bar__navigation{
+        top: 75px;
+        width: 100%;
+        text-align: center;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero img {
+        margin: 0; 
+    }
+
+    .explore-button {
+        margin-left: 0; 
+    }
+    .app-bar .app-bar__navigation {
+      position: absolute;
+      top: 50px;
+      left: -400px;
+      width: 100%;
+    }
+}
+  @media screen and (min-width: 650px) {
+    .app-bar {
+      grid-template-columns: 1fr auto;
+      padding: 8px 32px;
+    }
+   
+    .app-bar .app-bar__brand h1 {
+      font-size: 1.5em;
+    }
+   
+    .app-bar .app-bar__menu {
+      display: none;
+    }
+   
+    .app-bar .app-bar__navigation {
+      position: static;
+      width: 100%;
+    }
+   
+    .app-bar .app-bar__navigation ul li {
+      display: inline-block;
+    }
+   
+    .app-bar .app-bar__navigation ul li a {
+      display: inline-block;
+      width: 120px;
+      text-align: center;
+      margin: 0;
+    }
+   
+  }
+
+  @media only screen and (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 23px;
+    }
+    .hero-text p{
+        font-size: 15px;
+    }
+    .hero img {
+        margin: 0;
+        max-width: 280px;
+    }
+
+    .explore-button {
+        margin-left: 0; 
+    }
+    .article-container{
+        padding: 10px;
+    }
+    .article-header h1 {
+        font-size: 15px; 
+    }
+
+    .article-header p {
+        font-size: 14px; 
+    }
+
+    .article-card {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .article-card .card-item {
+        width: 100%; 
+        max-width: 400px;
+    }
+
+    .card-item a {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .card-item p {
+        text-align: center;
+    }
+}
+   
+  @media screen and (min-width: 800px) {
+    .app-bar .app-bar__brand h1 {
+      font-size: 2em;
+    }
+  }
+   
