@@ -5,9 +5,9 @@ const Home = {
     <div class="hero-content">
         <img src="apk.png" alt="Hero Button">
         <div class="hero-text">
-            <h1>Welcome to Artistik Indonesia (ARTIQ)! </h1>
-            <p>Explore every corner of this website to discover the beauty of Indonesian art that you want to explore. Enjoy your art journey at ARTIQ!</p>
-            <button class="explore-button"><a href="#/kesenian">Explore Now</a></button>
+            <h1>Selamat datang di Artistik Indonesia (ARTIQ)!</h1>
+            <p>Jelajahi setiap sudut website ini untuk menemukan keindahan seni Indonesia yang ingin Anda jelajahi. Selamat menikmati perjalanan seni Anda di ARTIQ!</p>
+            <button class="explore-button"><a href="#/kesenian">Selengkapnya</a></button>
         </div>
     </div>
 </div>
@@ -39,32 +39,32 @@ const Home = {
     </article>
     <!-- Collaborators Section -->
     <section class="collaborators">
-        <h2>Collaborators</h2>
+        <h2>Anggota Kami</h2>
         <ul>
             <li>
-                <img src="https://mm.feb.uncen.ac.id/wp-content/uploads/2016/01/tutor-8.jpg" alt="Collaborator 1">
-                <p>John Doe</p>
+                <img src="aji.jpg" alt="Collaborator 1">
+                <p>M Aji Sultan Hakim</p>
                 <p>Web Designer</p>
             </li>
             <li>
                 <img src="https://mm.feb.uncen.ac.id/wp-content/uploads/2016/01/tutor-8.jpg" alt="Collaborator 2">
-                <p>Jane Smith</p>
-                <p>Content Writer</p>
+                <p>Farhan Saputra Nasution</p>
+                <p>Backend Developer</p>
             </li>
             <li>
                 <img src="https://mm.feb.uncen.ac.id/wp-content/uploads/2016/01/tutor-8.jpg" alt="Collaborator 2">
-                <p>Jane Smith</p>
-                <p>Content Writer</p>
+                <p>Deni Kristanto</p>
+                <p>Backend Developer</p>
             </li>
             <li>
                 <img src="https://mm.feb.uncen.ac.id/wp-content/uploads/2016/01/tutor-8.jpg" alt="Collaborator 2">
-                <p>Jane Smith</p>
-                <p>Content Writer</p>
+                <p>Difatul Mu'Minah</p>
+                <p>Frontend Developer</p>
             </li>
             <li>
-                <img src="https://mm.feb.uncen.ac.id/wp-content/uploads/2016/01/tutor-8.jpg" alt="Collaborator 2">
-                <p>Jane Smith</p>
-                <p>Content Writer</p>
+                <img src="cind.jpg" alt="Collaborator 2">
+                <p>Cindya Novira Bangun</p>
+                <p>Frontend Developer</p>
             </li>
         </ul>
     </section>

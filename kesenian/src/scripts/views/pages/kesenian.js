@@ -12,8 +12,8 @@ const Kesenian = {
     
     <div class="wrapper">
       <div class="search-bar">
-        <input type="text" id="search-input" placeholder="Search..." tabindex="0" />
-        <button id="search-button" tabindex="0"><i class="ph-search">search</i></button>
+        <input type="text" id="search-input" placeholder="Cari..." tabindex="0" />
+        <button id="search-button" tabindex="0"><i class="ph-search">Cari</i></button>
       </div>
       <div id="search-results"></div>
       <div class="kesenian-list" id="kesenian-list"></div>
@@ -45,7 +45,7 @@ const Kesenian = {
           <h4>Jenis: ${kesenian.Jenis}</h4>
           <p>${kesenian.description}</p>
           <h5>Harga: Rp ${kesenian.harga} /hari</h5>
-          <button class="button-kesenian"><a href="#/order">Booking Now</a></button>
+          <button class="button-kesenian"><a href="#/order">Pesan Sekarang</a></button>
         </div>
         `;
     });

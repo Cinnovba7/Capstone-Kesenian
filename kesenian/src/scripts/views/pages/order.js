@@ -5,8 +5,8 @@ const Order = {
   async render() {
     return `
       <form id="orderForm">
-        <h1>Send Data To WhatsApp</h1>
-        <label for="name">Name</label>
+        <h1>Kirim Data ke WhatsApp</h1>
+        <label for="name">Nama</label>
         <input type="text" id="name" class="name">
 
         <label for="jenis">Jenis Kesenian</label>
@@ -25,10 +25,10 @@ const Order = {
         <label for="alamat">Alamat</label>
         <input type="text" id="alamat" class="alamat">
 
-        <label for="message">Message</label>
+        <label for="message">Keterangan</label>
         <textarea id="message" class="message" cols="30" rows="10"></textarea>
 
-        <button type="button" id="sendButton">Send Via WhatsApp</button>
+        <button type="button" id="sendButton">Kirim Melalui WhatsApp</button>
       </form>
     `;
   },
@@ -89,7 +89,7 @@ const Order = {
           + `*Nama Kesenian:* ${namaKesenian}%0a`
           + `*Harga:* Rp ${formattedHarga} /hari%0a`
           + `*Alamat:* ${alamat}%0a`
-          + `*Message:* ${message}%0a%0a`
+          + `*Keterangan:* ${message}%0a%0a`
           + 'Terima kasih telah memilih ARTIQ sebagai teman perjalananmu dalam mengekspresikan seni. Silahkan tunggu pemesananmu dengan penuh antusiasme! 🎨🌟';
 
       window.open(url, '_blank').focus();
