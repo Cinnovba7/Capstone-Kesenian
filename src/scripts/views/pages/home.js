@@ -26,12 +26,12 @@ const Home = {
         <div class="card-item">
             <img src="angklung.jpg" alt="angklung" class="article-image">
             <h1>Angklung</h1>
-            <p>Warisan Budaya Indonesia yang kedua adalah alat musik angklung. Angklung merupakan alat musik yang terbuat dari bahan bambu yang berasal dari tanah Sunda. Alat musik ini memang dikenal dengan keunikannya, karena untuk memainkan alat musik ini harus dengan cara menggoyangkannya hingga mengeluarkan atau menghasilkan nada tertentu.Angklung merupakan alat musik yang terbuat dari bahan bambu yang berasal dari tanah Sunda.Alat musik angklung sendiri juga telah diakui sejak tahun 2010 oleh UNESCO.</p>
+            <p>Warisan Budaya Indonesia yang kedua adalah alat musik angklung. Angklung merupakan alat musik yang terbuat dari bahan bambu yang berasal dari tanah Sunda. Alat musik ini memang dikenal dengan keunikannya, karena untuk memainkan alat musik ini harus dengan cara menggoyangkannya hingga mengeluarkan atau menghasilkan nada tertentu.Alat musik angklung sendiri juga telah diakui sejak tahun 2010 oleh UNESCO.</p>
         </div>
         <div class="card-item">
             <img src="tbali.jpg" alt="tari bali" class="article-image">
             <h1>Tari Bali</h1>
-            <p>Warisan Budaya Indonesia yang ketiga adalah tari bali. Dalam daftar ICH UNESCO yang ada pada tahun 2015, terdapat tiga genre tari Bali yang masuk ke dalamnya. Tiga genre tari Bali tersebut terdiri dari tarian keramat, tarian semi-keramat, dan tarian hiburan semata.
+            <p>Warisan Budaya Indonesia yang ketiga adalah tari bali. Dalam daftar ICH UNESCO yang ada pada tahun 2015, terdapat tiga genre tari Bali yang masuk ke dalamnya. 
 
             Tarian Bali ini sendiri seringkali identik dan tidak dapat dipisahkan dengan upacara serta berbagai ritual penting yang ada di Bali. Sehingga, seringkali aspek kesenian tari ini menjadi salah satu daya tarik utama bagi para wisatawan yang datang untuk berkunjung maupun berlibur ke pulau dewata ini.</p>
         </div>

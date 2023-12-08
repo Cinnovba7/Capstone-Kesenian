@@ -50,7 +50,7 @@
   .app-bar .app-bar__brand h1 {
     color: white;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 20px;
     user-select: none;
   }
    
@@ -86,29 +86,42 @@
 /*
 Hero
 */
-  .hero {
-    text-align: center;
-    padding: 15px;
+ /* Add a new CSS class for the animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 15px;
+  animation: fadeIn 1s ease-out; 
 }
 
 .hero-content {
-    display: flex;
-    align-items: center;
-    text-align: left;
+  display: flex;
+  align-items: center;
+  text-align: left;
 }
 
 .hero img {
-    max-width: 100%;
-    max-height: 475px;
-    margin-left: 50px;
-    margin-right: 100px; 
-    padding: 15px;
+  max-width: 100%;
+  max-height: 475px;
+  margin-left: 50px;
+  margin-right: 100px;
+  padding: 15px;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #333;
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
 }
 
 .explore-button {
@@ -122,14 +135,15 @@ Hero
   transition: background-color 0.3s ease;
   margin-top: 8px;
 }
-.explore-button a{
+
+.explore-button a {
   text-decoration: none;
   color: #fff;
   font-size: 15px;
 }
 
 .explore-button:hover {
-  background-color: #C63D2F;
+  background-color: #c63d2f;
 }
 
 /*
@@ -254,23 +268,29 @@ Hero
 
 .kesenian-list {
   display: grid;
-  gap: 10px;
+  gap: 5px;
   padding: 5px;
 
 }
 
 .kesenian-card {
+  position: relative;
+  max-width: 300px;
+  margin: 10px auto;
   border: 1px solid #b22222;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 5px; 
+  padding: 5px;
   text-align: left;
-  position: relative;
-  max-width: 300px; 
-  margin-top: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Added transition property */
 }
 
-.kesenian-card h2{
+.kesenian-card:hover {
+  transform: scale(1.05); /* Adjust the scale factor as needed */
+}
+
+.kesenian-card h2 {
   font-size: 20px;
   text-align: center;
   color: #b22222;
@@ -292,7 +312,7 @@ Hero
 
 .kesenian-card img {
   max-width: 100%;
-  height: 250px; 
+  height: 250px;
   margin-bottom: 3px;
 }
 
@@ -302,16 +322,15 @@ Hero
   min-height: 44px;
 }
 
-
 .kesenian-card p {
-  overflow: hidden; 
+  overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7; 
+  -webkit-line-clamp: 7;
   text-align: justify;
 }
 
-.kesenian-card h5{
+.kesenian-card h5 {
   font-size: 15px;
   margin-top: 15px;
 }
@@ -327,7 +346,8 @@ Hero
   transition: background-color 0.3s ease;
   margin-top: 8px;
 }
-.button-kesenian a{
+
+.button-kesenian a {
   text-decoration: none;
   color: #fff;
   font-size: 15px;
@@ -336,6 +356,7 @@ Hero
 .button-kesenian:hover {
   background-color: #bd1c1c;
 }
+
 
 /* Collaborators Section Styles */
 .collaborators {
@@ -423,60 +444,124 @@ button:hover {
   background-color: #bd1c1c;
 }
 
-.popup {
+/*
+  Popup
+*/
+
+body.popup-visible {
+  overflow: hidden;
+}
+
+.popup-visible .kesenian-list {
   display: none;
+}
+
+.popup-visible #popup {
+  display: block;
+}
+
+.popup {
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: 30px;
+  width: 60%;
+  height: 100%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
+  z-index: 1000;
+  max-height: 70vh; 
   overflow-y: auto;
-  max-height: 80vh;
-  transition: opacity 0.3s ease-in-out;
+  display: none;
+  margin-bottom: 30px;
 }
 
-body.popup-open {
-  visibility: hidden;
+.popup-visible .popup {
+  display: block;
 }
 
-.popup-content {
-  text-align: center;
-}
-
-.popup-content .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+.popup .close {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
   cursor: pointer;
+  z-index: 1002; 
 }
 
-.popup-content .close:hover,
-.popup-content .close:focus {
-  color: black;
+.popup .close:hover {
+  color: #ff0000;
+}
+
+.popup img {
+  display: block;
+  margin: 0 auto; 
+  max-width: calc(100% - 20px);
+  height: auto;
+  margin-bottom: 15px;
+  z-index: 1001;
+}
+
+.popup h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #b22222;
+}
+
+.popup h3, .popup h4, .popup p, .popup h5 {
+  margin-bottom: 10px;
+  text-align: justify;
+
+}
+
+.popup button {
+  background-color: #b22222;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
   text-decoration: none;
   cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
 }
 
-.popup.open {
-  opacity: 1;
-  pointer-events: auto;
+.popup button:hover {
+  background-color: #bd1c1c;
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; 
+  z-index: 999;
+}
+
+
+.popup-visible body {
+  overflow: hidden;
+}
+
+.popup-visible .popup-overlay,
+.popup-visible .popup {
+  display: block;
+}
+
 
   /*
   Footer
 */
- 
 footer {
-    padding: 16px;
-    background-color: #b22222;
-  }
+  margin-top: auto;
+  background-color: #b22222;
+  padding: 16px;
+  text-align: center;
+}
    
 footer p {
     text-align: center;
@@ -512,13 +597,11 @@ footer p {
     .app-bar .app-bar__navigation {
       position: absolute;
       top: 50px;
-      left: -400px;
+      left: -425px;
       width: 100%;
       background-color: #b22222;
     }
 }
-
-
 
   @media screen and (min-width: 650px) {
     .app-bar {
@@ -557,6 +640,32 @@ footer p {
   }
 
   @media only screen and (max-width: 768px) {
+    .popup {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%; 
+      max-height: 70vh; 
+      overflow-y: auto;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      z-index: 1000;
+      margin: 0;
+    }
+    .popup h2 {
+      font-size: 20px;
+    }
+  
+    .popup img {
+      max-width: 100%;
+    }
+  
+    .popup .close {
+      top: 5px;
+      right: 5px;
+    }
+    
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -624,6 +733,25 @@ footer p {
     .kesenian-list{
       grid-template-columns: repeat(4, 1fr);
       gap: 8px;
+    }
+
+  }
+  @media screen and (min-width: 1400px) {
+    .popup {
+      position: fixed;
+      top: 45%;
+      left: 50%;
+      width: 80%;
+      height: 100%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      z-index: 1000;
+      max-height: 70vh; 
+      overflow-y: auto;
+      display: none;
+      margin-bottom: 30px;
     }
   }
    

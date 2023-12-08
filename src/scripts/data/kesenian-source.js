@@ -107,8 +107,13 @@ const kesenians = [
     Jenis: 'Pakaian Adat',
     pict: 'https://i.pinimg.com/564x/f0/58/c6/f058c67c6945403d7798e17ea78026c8.jpg',
     harga: 300000,
-    description: `Pakaian adat Bali untuk pernikahan disebut dengan Payas Agung. Paya Agung adalah pakaian adat Bali yang lengkap dan juga mewah yang biasanya dikenakan oleh para pengantin dalam pernikahan adat Bali.
-    Pakaian adat Bali untuk pengantin ini mempunyai perbedaan antar daerah di Bali. Dari perbedaan yang ada ini kita bisa mengenali asal dari pakaian adat tersebut, seperti adat Medeeng Singaraja (Buleleng) akan sangat berbeda dengan pakaian adat di Asak Karangasem.`,
+    description: `Pulau Bali atau yang sering disebut sebagai pulau Dewata ini tidak hanya memiliki keindahan pada alamnya saja namun juga memiliki kebudayaan yang membuat kita takjub. Salah satu kebudayaan Bali yang tidak kalah dengan keindahan alamnya yakni pakaian adat Bali yang juga mendapat banyak sorotan. Pakaian adat bali memiliki keunikan dan filosofi tersendiri. Salah satunya yaitu Payas Agung.
+    Payas Agung terlihat memiliki kesan yang mewah, sakral dan juga agung. Pakaian adat Payas agung biasanya hanya digunakan pada acara yang penting saja seperti;
+    Acara pernikahan, Munggah deha (upacara kedewasaan), Pitra yadnya (ngaben), mesagih (upacara potong gigi), dan upacara adat lainnya.
+    Menurut Dinas Kebudayaan Pemerintah Kabupaten Buleleng, Pakaian adat Payas agung pada zaman dahulu hanya para bangsawan yang diperkenankan untuk mengenakan pakaian adat ini. Namun pada masa kini siapapun dapat mengenakannya. Payas Agung memiliki paduan warna emas, merah dan putih yang dapat dipakai baik oleh pria maupun wanita. Payas agung identik dengan mahkota tinggi yang menjulang. Mahkota tersebut terdiri dari bunga kap emas, sandat emas, empak-empak emas, dan petitis emas. 
+    Penggunaan Payas Agung disertai dengan riasan wajah yang mewah. Pada bagian dahi wanita dirias dengan lengkungan atau srinata agar wanita terlihat lebih bersahaja. Di antara kedua alis terdapat bindi yang dalam agama Hindu diyakini sebagai simbol penanda cinta, kecantikan, kemakmuran, kehormatan, hingga penangkal nasib buruk. Dahi menjadi lokasi penggunaan bindi karena merupakan tempat cakra keenam.
+    Busana wanita akan memakai tapih (kain) panjang yang melilit tubuh dari dada hingga ke jari kaki. Tapih ini akan dilapisi kemben sebagai penutup dada dan kamen untuk menutup hingga ke mata kaki. Perhiasan yang digunakan adalah cerik (seperti gelang) di bahu sebelah kiri serta pending emas (seperti ikat pinggang) di pinggang, gelang kana di lengan, dan gelang satru di pergelangan tangan. Sedangkan untuk pria, Payas Agung mengkombinasikan lilitan kain songket mewah dengan jas beludru bermotif prada Bali dan aksesori lain berupa keris.
+   `,
   },
   {
     name: ' Aesan Gede',
@@ -116,8 +121,48 @@ const kesenians = [
     Jenis: 'Pakaian Adat',
     pict: 'https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/akurat/gallery/2021/09/big/gal_6139a83357c9a4-69395439-63152985.jpg',
     harga: 500000,
-    description: ` Aesan Gede adalah pakaian adat masyarakat Palembang, Sumatera Selatan. Dalam bahasa Palembang, aesan memiliki arti baju atau pakaian, sementara gede berarti besar. Jadi, Aesan Gede adalah pakaian yang melambangkan kebesaran. 
-    Menurut sejarah, Aesan Gede merupakan salah satu peninggalan kerajaan Sriwijaya yang menganut kepercayaan Hindu-Budha. Sama seperti maknanya, pada masa itu, Aesan Gede adalah lambang keagungan dan kemewahan Kerajaan Sriwijaya.`,
+    description: ` Aesan Gede adalah pakaian adat masyarakat Palembang, Sumatera Selatan. Dalam bahasa Palembang, aesan memiliki arti baju atau pakaian, sementara gede berarti besar.Jadi Aesan memiliki arti hiasan dan gede berarti pembesar, jadi aesan gede artinya pakaian hiasan pembesar Palembang Pakaian adat aesan gede didominasi oleh warna merah dan benang berwarna emas dengan bahan tenunan kain songket.
+    Baju aesan gede yang dipakai perempuan berupa baju kurung dengan warna merah bermotif taburan bunga bintang keemasan dan dipadukan dengan kain songket lepus bersulam emas. Pakaian ini biasa dilengkapi dengan penutup dada, perhiasan, dan mahkota dengan untaian bunga.
+    Sementara pakaian yang digunakan pria berupa jubah bertabur bunga emas, memakai celana, dan kain songket yang dililitkan. Biasanya menggunakan songkok emas sebagai penghias kepala. Warna yang bertaburan emas ini melambangkan citra Pulau Sumatera di masa lalu yang dikenal sebagai swarnadwipa atau pulau emas.
+    Setiap detail dan motif yang terdapat pada busana aesan gede memiliki arti dan makna tersendiri yaitu:
+    
+    a. Kain Songket Lepus
+    Kain dengan motif geometris yang abstrak dan zigzag ini pasalnya merupakan kain songket tertua dalam sejarah. Makna dari simbol yang ada pada kain songket ini adalah melambangkan keramahan, ketertiban, dan rasa saling menghormati.
+
+    b. Celana Sutera
+    Celana panjang berbahan dasar sutera ini memiliki bordiran bentuk bunga yang mempunyai tangkai dan menjalar panjang di bawahnya. Motif tersebut merupakan simbol mentalitas yang sangat gigih dalam menjalani kehidupan.
+
+    c. Kesuhan
+    Kesuhan merupakan mahkota yang dipakai oleh pengantin laki-laki maupun perempuan. Kesuhan pada laki-laki berarti laki-laki harus memiliki sifat berani dalam keluarga dan masyarakat. Kesuhan pada perempuan berarti perempuan harus memiliki sifat yang keibuan, lembut, dan mempunyai rasa kekeluargaan.
+
+    d. Cempako
+    Cempako merupakan bunga cempaka yang dipakai di kepala. maknanya adalah pengantin menjaga keindahan perilakunya.
+
+    e. Sanggul Malang
+    Sanggul malang berarti rambut yang digelung rapi, hal tersebut melambangkan makna perempuan sebagai sosok yang anggun, rapi, dan tenang ketika menghadapi suatu masalah.
+
+    f. Tebeng Malu
+    Tebeng malu merupakan penutup bagian samping kepala yang berbentuk bola-bola warna-warni, memiliki makna bahwa manusia harus menjaga pandangannya.
+
+    g. Terate
+    Terate merupakan hiasan berupa kerah lebar yang digunakan untuk menutupi bagian dada dan pundak baik untuk pengantin laki-laki maupun perempuan. Hiasan ini menggambarkan kemegahan, kesucian, dan kesabaran.
+
+    h. Kebo Munggah
+    Kebo Munggah juga disebut sebagai kalung tapak jajo yang berarti kesuburan dan dipandang sebagai penolak hal-hal jahat.
+
+    i. Selempang Sawit
+    Selempang sawit berjumlah dua, dipakai dengan cara menyilang dari bahu kiri ke pinggang sebelah kanan, dan sebaliknya.Artinya bahwa laki-laki dan perempuan harus sejajar.
+
+    j. Pending
+    Pending berupa ikat pinggang yang dipakai baik oleh laki-laki dan perempuan yang berbentuk lempengan, Pending bermakna perempuan dan laki-laki siap menjalani kehidupan.
+
+    k. Saputangan Segitigo
+    Saputangan segitigo terbuat dari beludru berwarna merah dengan salah satu sisinya terdapat hiasan taburan kelopak bunga melati dari emas. Memiliki makna ketegaran dan ketenangan hidup.
+
+    l. Cenela
+    Cenela merupakan jenis sandal yang dipakai kedua mempelai, biasanya berwarna senada dengan atasan.
+    maknanya adalah bahwa dalam melangkah harus mempunyai pelindung diri yaitu agama.
+`,
   },
   {
     name: 'Pepadun',
@@ -125,8 +170,45 @@ const kesenians = [
     Jenis: 'Pakaian Adat',
     pict: 'https://akcdn.detik.net.id/community/media/visual/2023/05/27/baju-adat-lampung-pepadun.jpeg?w=1080',
     harga: 350000,
-    description: `Pepadun adalah bangku tahta kepenyimbangan adat yang terbuat dari bahan kayu berkaki empat dan memiliki ukiran. Masyarakat adat Pepadun yakni Abung, Pubian, Menggala dan Buai Lima tinggal di daerah pedalaman Lampung.
-    Wilayah kediamannya, seperti di Lampung Tengah, Lampung Utara, Way Kanan, Tulang Bawang, Tulang Bawang Barat, sebagian Pesawaran, Pringsewu, dan Mesuji. Baju adat Pepadun memiliki ciri khas warna putih yang berarti tempat duduk penobatan penguasa.`,
+    description: `"Pepadun" dalam arti sehari-hari adalah bangku tahta kepenyimbangan adat yang tebruat dari bahan kayu berkaki empat dan berukir-ukir. Kemudian, masyarakat adat Pepadun berkediaman di daerah pedalaman Lampung, seperti Lampung Tengah, Lampung Utara, Way Kanan, Tulang Bawang, Tulang Bawang Barat, sebagian Pesawaran, sebagian Pringsewu, dan sebagian Mesuji. Daerah tersebut terdiri dari masyarakat adat Abung (Abung Siwo Migo), Pubian (Pubian Telu Suku), Menggala / TulangBawang (Migo Pak) dan Buai Lima. Pakaian ini memiliki makna "tempat duduk penobatan penguasa". Pakaian adat ini memiliki ciri khas warna putih.
+    Aksesoris Pakaian Adat Pepadun dan Maknanya:
+    
+    1. SIGER
+    Siger merupakan mahkota yang terbuat dari kuningan dan dikenakan oleh wanita. Siger dari siger daerah lain, siger ini berbentuk seperti tanduk dengan hiasan menyerupai bunya yang ditatah bertitik-titik.
+    Siger ini memiliki makna "jurai sembilan" yang mana adalah sembilan suku pertama yang menempati Lampung. Terdapat makna lain juga yaitu sembilan sungai besar yang mengaliri Lampung yaitu Way Semangka, Way Sekampung, Way Seputih, Way Pangubuan, Way Abung Sarem, Way Sungkai, Way Kanan, Way Tulangbawang, dan Way Mesuji.
+    
+    2. KOPIAH EMAS
+    Kopiah emas ini dikenakan oleh pria. Kopiah dengan bentuk bulat keatas dan beruji tajam pada ujungnya ini berbahan kuningan. Tak kalah mewah dengan siger, kopiah ini berhiaskan karangan bunga yang memberi kesan mewah dan indah.
+    
+    3. SEROJA BULAN
+    Satu hingga tiga buah mahkota kecil berbentuk bunga bias yang terbuat dari kuningan ini dipasang di atas siger. Serajo bulan memiliki makna yaitu siapapun yang memakai dalam adat istiadat maupun keluarga, ia memiliki kedudukan yang tinggi layaknya bulan.
+    
+    4. BULAN TEMENGGAL
+    Hiasan yang menyerupai tanduk tanpa motif dan terbuat dari kuningan ini dikenakan di leher dengan menggantung di bawah dada dan di atas kain sesapur. Bulan temenggal dimaknakan sebagai bulan pada saat purnama yang mana pemakainnya kelak menyinari alam sekitar dengan teduh dan tenang.
+    
+    5. BUAH JUKUN
+    Buah jukun adalah kalung panjang dari rangkaian untaian bunga yang berasal dari hiasan buah-buah kecil di atas kain. Aksesoris ini dikenakan oleh pria dengan melingkar dari bahu ke bagian perut sampai ke belakang dengan bentuk hiasan buah-buah kecil di atas kain. Aksesoris ini memiliki makna sebagai alat tolak balak dari orang yang berbuat jahat.
+    
+    6. BABE
+    Bebe adalah sulaman motif bunga dari kain halus yang berlubang-lubang bagian pinggirnya. Bebe dikenakan di bagian bahu dengan makna supaya pemakai terhindar dari segala penyakit.
+    
+    7. GELANG KANO
+    Gelang ini dikenakan baik pria maupun wanita pada lengan kanan dengan bentuk bulat juga lebih besar dari gelang biasa yang terbuat dari kuningan. Aksesoris ini memiliki makna sebagai pemersatu keluarga supaya keluarga tidak bercerai berai.
+    
+    8. BULU SERATI DAN PENDING
+    Aksesoris berbentuk ikat pinggang ini memiliki makna sebagai pengikat atau penyempurnaan ikatan perkawinan. Bulu serati sendiri terbuat dari kain beludru yang dilapisi kain merah dan dikombinasikan dengan ikat pinggang pending.
+    
+    9. RAMBAI RINGGIT
+    Uang ringgit Belanda bergambar Ratu Belanda yang dirangkaian dengan peniti dan kain, digantungkan melingkari kain tapis bagian bawah baju pengantin wanita atau melingkari sesapur (baju kurung pengantin wanita).
+    
+    10. BUAH MANGGUS
+    Berbentuk bulat seperti permainan terbuat dari kuningan, berornamen dan berantai, biasanya dipegang pengantin wanita dan pengantin pria.
+    
+    11. GELANG BURUNG
+    Gelang yang dikenakan di bawah bahu ini terbuat dari kuningan dengan bentuk burung bersayap. Gelang ini dikenakan di sebelah kanan ataupun kiri dan biasa jua dikenakan oleh pria maupun wanita. Makna dari gelang burung adalah kebebasan.
+    
+    12. KERIS
+    Keris sendiri sebagai senjata tradisional dengan tempaan besi yang ujungnya berliku dan runcing, gagangnya berbentuk melengkung dan terbuat dari lempengan kuningan.`,
   },
 ];
 
