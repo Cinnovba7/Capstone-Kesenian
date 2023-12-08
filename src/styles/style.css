@@ -18,7 +18,7 @@
    
   .app-bar {
     padding: 8px 16px;
-    background-color: white;
+    background-color: #b22222;
     display: grid;
     grid-template-columns: auto 1fr auto;
     gap: 10px;
@@ -39,6 +39,7 @@
     font-size: 18px;
     padding: 8px;
     cursor: pointer;
+    color: white;
   }
    
   .app-bar .app-bar__brand {
@@ -47,7 +48,7 @@
   }
    
   .app-bar .app-bar__brand h1 {
-    color: #F05941;
+    color: white;
     text-transform: uppercase;
     font-size: 22px;
     user-select: none;
@@ -61,7 +62,6 @@
     text-align: center;
     transition: all 0.3s;
     padding: 8px;
-    background-color: white;
     overflow: hidden;
   }
    
@@ -72,15 +72,23 @@
   .app-bar .app-bar__navigation ul li a {
     display: inline-block;
     text-decoration: none;
-    color: #240e0b;
+    color: white;
     padding: 8px;
     margin-bottom: 5px;
     width: 100%;
+
   }
+
+  .app-bar .app-bar__navigation ul li a:hover{
+    color: #333;
+  }
+
+/*
+Hero
+*/
   .hero {
     text-align: center;
-    padding: 10px;
-    background-color: #FFBB5C;
+    padding: 15px;
 }
 
 .hero-content {
@@ -104,25 +112,29 @@
 }
 
 .explore-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #F05941;
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
 }
 .explore-button a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 15px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
 }
 
 .explore-button:hover {
-    background-color: #C63D2F;
+  background-color: #C63D2F;
 }
+
+/*
+  Home
+*/
 .article-container {
     display: flex;
     flex-direction: column;
@@ -131,10 +143,10 @@
 
 .article-header {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 .article-header h1{
-    color: #F05941;
+    color: #b22222;
     font-size: 15px;
 }
 .article-header p {
@@ -169,9 +181,9 @@
     transform: scale(1.05); 
 }
 
-.card-item a {
+.card-item h1 {
     text-decoration: none;
-    color: #F05941;
+    color: #b22222;
     font-size: 20px;
     font-weight: bolder;
 }
@@ -187,7 +199,7 @@
 }
 
 .kesenian-header h1 {
-    color: #F05941;
+    color: #b22222;
     font-size: 15px;
 }
 
@@ -196,57 +208,291 @@
     overflow: hidden;
     color: #333;
     font-size: 15px;
-    text-align: center; /* Tambahkan properti text-align: center */
+    text-align: center; 
 }
+/*
+  search
+*/
+
+.search-bar{
+  margin-top: 10px;
+  text-align: center;
+}
+#search-input {
+  padding: 5px;
+  border: 1px solid #b22222;
+  border-radius: 5px;
+  margin-right: 5px; 
+  width: 200px; 
+  min-height: 44px;
+  min-width: 44px;
+}
+
+#search-button {
+  background-color: #b22222;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100px; 
+  min-height: 45px;
+  min-width: 44px;
+}
+
+#search-button i {
+  font-size: 18px; 
+  margin-right: 5px; 
+}
+
+#search-button:hover {
+  background-color: #bd1c1c;
+}
+
+/*
+  kesenian card
+*/
+
+.kesenian-list {
+  display: grid;
+  gap: 10px;
+  padding: 5px;
+
+}
+
+.kesenian-card {
+  border: 1px solid #b22222;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 5px; 
+  text-align: left;
+  position: relative;
+  max-width: 300px; 
+  margin-top: 20px;
+}
+
+.kesenian-card h2{
+  font-size: 20px;
+  text-align: center;
+  color: #b22222;
+  cursor: pointer;
+}
+
+.kesenian-card h3 {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #b22222;
+  align-items: center;
+  padding: 5px;
+  font-size: 13px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
+
+.kesenian-card img {
+  max-width: 100%;
+  height: 250px; 
+  margin-bottom: 3px;
+}
+
+.kesenian-card h4 {
+  font-size: 17px;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+
+.kesenian-card p {
+  overflow: hidden; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 7; 
+  text-align: justify;
+}
+
+.kesenian-card h5{
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+.button-kesenian {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b22222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 8px;
+}
+.button-kesenian a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 15px;
+}
+
+.button-kesenian:hover {
+  background-color: #bd1c1c;
+}
+
+/* Collaborators Section Styles */
+.collaborators {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.collaborators h2 {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.collaborators ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.collaborators li {
+  text-align: center;
+  margin: 10px;
+}
+
+.collaborators img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.collaborators p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/*
+  form
+*/
+form {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #b22222;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #b22222;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #b22222;
+
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+
+}
+
+button {
+  background-color: #b22222;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #bd1c1c;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: 30px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  overflow-y: auto;
+  max-height: 80vh;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body.popup-open {
+  visibility: hidden;
+}
+
+.popup-content {
+  text-align: center;
+}
+
+.popup-content .close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.popup-content .close:hover,
+.popup-content .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
   /*
   Footer
 */
  
 footer {
     padding: 16px;
+    background-color: #b22222;
   }
    
 footer p {
     text-align: center;
-    color: #aaaaaa;
+    color: white;
   }
 
-  /*
-  artikel 1*/
-  section {
-    border: 1px solid #ddd;
-    border-radius: 8px; 
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    max-width: 600px;
-    margin: 20px auto; 
-  }
-  
-  h1, h2, p, img {
-    margin-bottom: 15px;
-  }
-  
-  h1{
-    color: #F05941;
-    font-size: 30px;
-    font-weight: bolder;
-    text-align: center;
-  }
-  .article-image {
-    width: 100%;
-    border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .article-image:hover {
-    transform: scale(1.1); 
-  }
+
+
 
   @media only screen and (max-width: 320px) {
     .app-bar .app-bar__navigation{
-        top: 75px;
+        top: 80px;
         width: 100%;
         text-align: center;
+        background-color: #b22222;
+
     }
   }
 
@@ -268,8 +514,12 @@ footer p {
       top: 50px;
       left: -400px;
       width: 100%;
+      background-color: #b22222;
     }
 }
+
+
+
   @media screen and (min-width: 650px) {
     .app-bar {
       grid-template-columns: 1fr auto;
@@ -298,6 +548,10 @@ footer p {
       width: 120px;
       text-align: center;
       margin: 0;
+    }
+    .kesenian-list{
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
     }
    
   }
@@ -360,3 +614,21 @@ footer p {
     }
   }
    
+  @media screen and (min-width: 850px) {
+    .kesenian-list{
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+   
+  @media screen and (min-width: 1200px) {
+    .kesenian-list{
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+  }
+   
+  @media screen and (min-width: 1600px) {
+    .kesenian-list {
+        grid-template-columns: repeat(5, 1fr);
+    }
+  }

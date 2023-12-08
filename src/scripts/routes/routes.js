@@ -1,11 +1,14 @@
 import Kesenian from '../views/pages/kesenian';
 import Home from '../views/pages/home';
-import Artikel1 from '../views/pages/artikel1';
+import Detail from '../views/pages/detail';
+import Order from '../views/pages/order';
 
 const routes = {
   '/': Home,
   '/kesenian': Kesenian,
-  '/artikel1': Artikel1,
+  '/detail/:name': Detail,
+  '/order': Order,
+
 };
 
 export default routes;
