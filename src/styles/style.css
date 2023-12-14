@@ -603,7 +603,19 @@ body.popup-visible {
   margin-top: 10px;
 }
 
-
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+ 
+.skip-link:focus {
+   top: 0;
+}
   @media only screen and (max-width: 320px) {
     .app-bar .app-bar__navigation{
         top: 80px;

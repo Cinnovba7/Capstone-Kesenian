@@ -5,30 +5,30 @@ const Order = {
   async render() {
     return `
       <form id="orderForm">
-        <h1>Kirim Data ke WhatsApp</h1>
+        <h1 tabindex="0">Kirim Data ke WhatsApp</h1>
         <label for="name">Nama</label>
-        <input type="text" id="name" class="name">
+        <input type="text" id="name" class="name" tabindex="0">
 
-        <label for="jenis">Jenis Kesenian</label>
+        <label for="jenis" tabindex="0">Jenis Kesenian</label>
         <select id="jenis" class="jenis">
-          <option value="Tarian">Tarian</option>
-          <option value="Teater">Teater</option>
-          <option value="Pakaian Adat">Pakaian Adat</option>
+          <option value="Tarian" tabindex="0">Tarian</option>
+          <option value="Teater" tabindex="0">Teater</option>
+          <option value="Pakaian Adat" tabindex="0">Pakaian Adat</option>
         </select>
 
         <label for="namaKesenian">Nama Kesenian</label>
-        <select id="namaKesenian" class="namaKesenian"></select>
+        <select id="namaKesenian" class="namaKesenian" tabindex="0"></select>
 
         <label for="harga">Harga</label>
-        <span id="hargaDisplay" class="harga"></span>
+        <span id="hargaDisplay" class="harga" tabindex="0"></span>
 
         <label for="alamat">Alamat</label>
-        <input type="text" id="alamat" class="alamat">
+        <input type="text" id="alamat" class="alamat" tabindex="0">
 
         <label for="message">Keterangan</label>
-        <textarea id="message" class="message" cols="30" rows="10"></textarea>
+        <textarea id="message" class="message" cols="30" rows="10" tabindex="0"></textarea>
 
-        <button type="button" id="sendButton">Kirim Melalui WhatsApp</button>
+        <button type="button" id="sendButton" tabindex="0">Kirim Melalui WhatsApp</button>
       </form>
     `;
   },

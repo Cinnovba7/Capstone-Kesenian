@@ -5,9 +5,9 @@ const Kesenian = {
   render() {
     return `
     <div class="kesenian-header">
-      <h1>Daftar Kesenian Indonesia</h1>
-      <h2>Simak Daftar Kesenian Berikut!</h2>
-      <p>Kesenian apa sih yang bisa kamu nikmati? Yuk Simak Daftar Kesenian Indonesia yang beragam berikut ini!</p>
+      <h1 tabindex="0">Daftar Kesenian Indonesia</h1>
+      <h2 tabindex="0">Simak Daftar Kesenian Berikut!</h2>
+      <p tabindex="0">Kesenian apa sih yang bisa kamu nikmati? Yuk Simak Daftar Kesenian Indonesia yang beragam berikut ini!</p>
     </div>
     
     <div class="wrapper">
@@ -15,7 +15,7 @@ const Kesenian = {
         <input type="text" id="search-input" placeholder="Cari..." tabindex="0" />
         <button id="search-button" tabindex="0"><i class="ph-search">Cari</i></button>
       </div>
-      <div id="search-results"></div>
+      <div id="search-results" tabindex="0"></div>
       <div class="kesenian-list" id="kesenian-list"></div>
     </div>
 
@@ -23,13 +23,13 @@ const Kesenian = {
     <div id="popup" class="popup">
       <div class="popup-content">
         <span class="close" id="popup-close">&times;</span>
-        <img src="" alt="" id="popup-image" class="popup-image">
-        <h2 id="popup-name"></h2>
-        <h3 id="popup-asal"></h3>
-        <h4 id="popup-jenis"></h4>
-        <p id="popup-description"></p>
-        <h5 id="popup-harga"></h5>
-        <button class="button-kesenian" id="popup-order">Pesan Sekarang</button>
+        <img src="" alt="" id="popup-image" class="popup-image" tabindex="0">
+        <h2 id="popup-name" tabindex="0"></h2>
+        <h3 id="popup-asal" tabindex="0"></h3>
+        <h4 id="popup-jenis" tabindex="0"></h4>
+        <p id="popup-description" tabindex="0"></p>
+        <h5 id="popup-harga" tabindex="0"></h5>
+        <button class="button-kesenian" id="popup-order" tabindex="0">Pesan Sekarang</button>
       </div>
     </div>
     `;
@@ -55,13 +55,13 @@ const Kesenian = {
       kesenianCard.setAttribute('tabindex', '0');
 
       kesenianCard.innerHTML = `
-        <img src="${kesenian.pict}" alt="${kesenian.name}">
-        <h2 class="clickable" tabindex="0">${kesenian.name}</h2>
+        <img src="${kesenian.pict}" alt="${kesenian.name}" tabindex="0">
+        <h2 class="clickable">${kesenian.name}</h2>
         <h3 tabindex="0">${kesenian.asal}</h3>
-        <h4>Jenis: ${kesenian.Jenis}</h4>
-        <p>${kesenian.description}</p>
-        <h5>Harga: Rp ${kesenian.harga} /hari</h5>
-        <button class="button-kesenian"><a href="#/order">Pesan Sekarang</a></button>
+        <h4 tabindex="0">Jenis: ${kesenian.Jenis}</h4>
+        <p tabindex="0">${kesenian.description}</p>
+        <h5 tabindex="0">Harga: Rp ${kesenian.harga} /hari</h5>
+        <button class="button-kesenian" tabindex="0"><a href="#/order">Pesan Sekarang</a></button>
       `;
 
       const h2Element = kesenianCard.querySelector('h2.clickable');
