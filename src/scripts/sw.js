@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-restricted-globals */
+/* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 self.addEventListener('install', (event) => {
   console.log('Installing Service Worker ...');

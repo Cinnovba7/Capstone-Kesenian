@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable implicit-arrow-linebreak */
 import kesenians from '../../data/kesenian-source';
 
