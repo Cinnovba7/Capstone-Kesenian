@@ -68,33 +68,45 @@ const Order = {
     document.getElementById('sendButton').addEventListener('click', () => this.sendWhatsApp());
 
     this.sendWhatsApp = function () {
-      const phonenumber = '+6281937369031';
+      if (validateForm()) {
+        const phonenumber = '+6281937369031';
 
+        const name = document.querySelector('.name').value;
+        const alamat = document.querySelector('.alamat').value;
+        const jenis = jenisSelect.value;
+        const namaKesenian = namaKesenianSelect.value;
+        const message = document.querySelector('.message').value;
+
+        // Mengambil harga dari opsi yang dipilih
+        const selectedOption = namaKesenianSelect.options[namaKesenianSelect.selectedIndex];
+        const harga = selectedOption.getAttribute('data-harga');
+
+        // Format harga dengan titik
+        const formattedHarga = new Intl.NumberFormat('id-ID').format(harga);
+
+        const url = `https://wa.me/${phonenumber}?text=`
+            + 'Halo! Selamat datang di dunia kesenian bersama ARTIQ. Jangan lewatkan momen spesialmu, berikut adalah ringkasan pemesananmu!:'
+            + `%0a*Name:* ${name}%0a`
+            + `*Jenis:* ${jenis}%0a`
+            + `*Nama Kesenian:* ${namaKesenian}%0a`
+            + `*Harga:* Rp ${formattedHarga} /hari%0a`
+            + `*Alamat:* ${alamat}%0a`
+            + `*Keterangan:* ${message}%0a%0a`
+            + 'Terima kasih telah memilih ARTIQ sebagai teman perjalananmu dalam mengekspresikan seni. Silahkan tunggu pemesananmu dengan penuh antusiasme! 🎨🌟';
+
+        window.open(url, '_blank').focus();
+      } else {
+        alert('Harap isi semua kolom yang wajib diisi.');
+      }
+    };
+
+    function validateForm() {
       const name = document.querySelector('.name').value;
       const alamat = document.querySelector('.alamat').value;
-      const jenis = jenisSelect.value;
-      const namaKesenian = namaKesenianSelect.value;
       const message = document.querySelector('.message').value;
 
-      // Mengambil harga dari opsi yang dipilih
-      const selectedOption = namaKesenianSelect.options[namaKesenianSelect.selectedIndex];
-      const harga = selectedOption.getAttribute('data-harga');
-
-      // Format harga dengan titik
-      const formattedHarga = new Intl.NumberFormat('id-ID').format(harga);
-
-      const url = `https://wa.me/${phonenumber}?text=`
-          + 'Halo! Selamat datang di dunia kesenian bersama ARTIQ. Jangan lewatkan momen spesialmu, berikut adalah ringkasan pemesananmu!:'
-          + `%0a*Name:* ${name}%0a`
-          + `*Jenis:* ${jenis}%0a`
-          + `*Nama Kesenian:* ${namaKesenian}%0a`
-          + `*Harga:* Rp ${formattedHarga} /hari%0a`
-          + `*Alamat:* ${alamat}%0a`
-          + `*Keterangan:* ${message}%0a%0a`
-          + 'Terima kasih telah memilih ARTIQ sebagai teman perjalananmu dalam mengekspresikan seni. Silahkan tunggu pemesananmu dengan penuh antusiasme! 🎨🌟';
-
-      window.open(url, '_blank').focus();
-    };
+      return name.trim() !== '' && alamat.trim() !== '' && message.trim() !== '';
+    }
   },
 };
 

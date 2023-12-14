@@ -57,7 +57,7 @@
   .app-bar .app-bar__navigation {
     position: absolute;
     top: 50px;
-    left: -180px;
+    left: -190px;
     width: 100%;
     text-align: center;
     transition: all 0.3s;
@@ -462,7 +462,7 @@ body.popup-visible {
 
 .popup {
   position: fixed;
-  top: 50%;
+  top: 45%;
   left: 50%;
   width: 60%;
   height: 100%;
@@ -471,7 +471,7 @@ body.popup-visible {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
   z-index: 1000;
-  max-height: 70vh; 
+  max-height: 60vh; 
   overflow-y: auto;
   display: none;
   margin-bottom: 30px;
@@ -572,13 +572,13 @@ body.popup-visible {
 
 .footer-content {
   display: flex;
-  flex-wrap: wrap; /* Baris baru untuk perangkat seluler */
+  flex-wrap: wrap; 
   justify-content: space-between;
   align-items: center;
 }
 
 .logo img {
-  max-width: 100px; /* Sesuaikan ukuran logo */
+  max-width: 100px; 
 }
 
 .contact-info {
@@ -687,6 +687,7 @@ body.popup-visible {
   @media only screen and (max-width: 768px) {
     .popup {
       position: absolute;
+      top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
       width: 90%; 
@@ -761,17 +762,26 @@ body.popup-visible {
         text-align: center;
     }
     .footer-content {
-        text-align: center;
-    }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+  }
 
-    .logo,
-    .contact-info,
-    .copyright {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 10px;
-    }
+  .logo,
+  .contact-info {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 10px;
+      display: none; 
+  }
+
+  .copyright {
+      width: 100%;
+      text-align: center;
+  }
 }
+
    
   @media screen and (min-width: 800px) {
     .app-bar .app-bar__brand h1 {
