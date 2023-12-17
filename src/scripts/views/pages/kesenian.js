@@ -41,7 +41,9 @@ const Kesenian = {
     const keyword = searchInput.value.toLowerCase();
 
     const searchResults = kesenians.filter((kesenian) =>
-      kesenian.Jenis.toLowerCase().includes(keyword));
+      kesenian.name.toLowerCase().includes(keyword)
+      || kesenian.asal.toLowerCase().includes(keyword)
+      || kesenian.Jenis.toLowerCase().includes(keyword));
 
     this.showKesenianList(searchResults);
   },

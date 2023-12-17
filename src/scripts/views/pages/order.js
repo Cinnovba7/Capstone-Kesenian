@@ -10,18 +10,20 @@ const Order = {
         <label for="name">Nama</label>
         <input type="text" id="name" class="name" tabindex="0">
 
-        <label for="jenis" tabindex="0">Jenis Kesenian</label>
-        <select id="jenis" class="jenis">
-          <option value="Tarian" tabindex="0">Tarian</option>
-          <option value="Teater" tabindex="0">Teater</option>
-          <option value="Pakaian Adat" tabindex="0">Pakaian Adat</option>
-        </select>
-
         <label for="namaKesenian">Nama Kesenian</label>
         <select id="namaKesenian" class="namaKesenian" tabindex="0"></select>
 
         <label for="harga">Harga</label>
         <span id="hargaDisplay" class="harga" tabindex="0"></span>
+
+        <label for="tanggalPemesanan">Tanggal Pemesanan</label>
+        <input type="date" id="tanggalPemesanan" class="tanggalPemesanan" tabindex="0">
+
+        <label for="tanggalPengembalian">Tanggal Pengembalian</label>
+        <input type="date" id="tanggalPengembalian" class="tanggalPengembalian" tabindex="0">
+
+        <label for="alamatEmail">Alamat Email</label>
+        <input type="email" id="alamatEmail" class="alamatEmail" tabindex="0">
 
         <label for="alamat">Alamat</label>
         <input type="text" id="alamat" class="alamat" tabindex="0">
@@ -35,20 +37,16 @@ const Order = {
   },
 
   async afterRender() {
-    const jenisSelect = document.querySelector('.jenis');
     const namaKesenianSelect = document.querySelector('.namaKesenian');
     const hargaDisplay = document.getElementById('hargaDisplay');
+    const emailInput = document.getElementById('alamatEmail');
 
     updateNamaKesenianOptions();
 
-    jenisSelect.addEventListener('change', updateNamaKesenianOptions);
     namaKesenianSelect.addEventListener('change', updateHargaDisplay);
 
     function updateNamaKesenianOptions() {
-      const selectedJenis = jenisSelect.value;
-      const filteredKesenians = kesenians.filter((kesenian) => kesenian.Jenis === selectedJenis);
-
-      namaKesenianSelect.innerHTML = filteredKesenians.map((kesenian) => `<option value="${kesenian.name}" data-harga="${kesenian.harga}">${kesenian.name}</option>`).join('');
+      namaKesenianSelect.innerHTML = kesenians.map((kesenian) => `<option value="${kesenian.name}" data-harga="${kesenian.harga}">${kesenian.name}</option>`).join('');
 
       // Set initial harga display
       updateHargaDisplay();
@@ -62,19 +60,18 @@ const Order = {
       const formattedHarga = new Intl.NumberFormat('id-ID').format(harga);
 
       // Display the harga
-      hargaDisplay.textContent = `Harga: ${formattedHarga}`;
+      hargaDisplay.textContent = `Harga: Rp ${formattedHarga} /hari`;
     }
-
-    document.getElementById('sendButton').addEventListener('click', () => this.sendWhatsApp());
 
     this.sendWhatsApp = function () {
       if (validateForm()) {
         const phonenumber = '+6281937369031';
 
         const name = document.querySelector('.name').value;
+        const tanggalPemesanan = document.querySelector('.tanggalPemesanan').value;
+        const tanggalPengembalian = document.querySelector('.tanggalPengembalian').value;
+        const alamatEmail = emailInput.value;
         const alamat = document.querySelector('.alamat').value;
-        const jenis = jenisSelect.value;
-        const namaKesenian = namaKesenianSelect.value;
         const message = document.querySelector('.message').value;
 
         // Mengambil harga dari opsi yang dipilih
@@ -85,10 +82,11 @@ const Order = {
         const formattedHarga = new Intl.NumberFormat('id-ID').format(harga);
 
         const url = `https://wa.me/${phonenumber}?text=`
-            + 'Halo! Selamat datang di dunia kesenian bersama ARTIQ. Jangan lewatkan momen spesialmu, berikut adalah ringkasan pemesananmu!:'
+            + 'Halo! Selamat datang di dunia kesenian bersama ARTIQ. Jangan lewatkan momen spesialmu, berikut adalah ringkasan pemesananmu:'
             + `%0a*Name:* ${name}%0a`
-            + `*Jenis:* ${jenis}%0a`
-            + `*Nama Kesenian:* ${namaKesenian}%0a`
+            + `*Tanggal Pemesanan:* ${tanggalPemesanan}%0a`
+            + `*Tanggal Pengembalian:* ${tanggalPengembalian}%0a`
+            + `*Alamat Email:* ${alamatEmail}%0a`
             + `*Harga:* Rp ${formattedHarga} /hari%0a`
             + `*Alamat:* ${alamat}%0a`
             + `*Keterangan:* ${message}%0a%0a`
@@ -96,16 +94,32 @@ const Order = {
 
         window.open(url, '_blank').focus();
       } else {
-        alert('Harap isi semua kolom yang wajib diisi.');
+        alert('Harap isi semua kolom yang wajib diisi atau periksa format alamat email.');
       }
     };
 
+    document.getElementById('sendButton').addEventListener('click', () => this.sendWhatsApp());
+
     function validateForm() {
       const name = document.querySelector('.name').value;
+      const tanggalPemesanan = document.querySelector('.tanggalPemesanan').value;
+      const tanggalPengembalian = document.querySelector('.tanggalPengembalian').value;
+      const alamatEmail = emailInput.value;
       const alamat = document.querySelector('.alamat').value;
       const message = document.querySelector('.message').value;
 
-      return name.trim() !== '' && alamat.trim() !== '' && message.trim() !== '';
+      // Validasi format alamat email menggunakan regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const isEmailValid = emailRegex.test(alamatEmail);
+
+      return (
+        name.trim() !== ''
+        && tanggalPemesanan.trim() !== ''
+        && tanggalPengembalian.trim() !== ''
+        && isEmailValid // Cek format alamat email
+        && alamat.trim() !== ''
+        && message.trim() !== ''
+      );
     }
   },
 };
