@@ -4,6 +4,7 @@ import 'regenerator-runtime';
 import '../styles/style.css';
 import swRegister from './utils/sw-register';
 
+
 import App from './views/app';
 
 const app = new App({
