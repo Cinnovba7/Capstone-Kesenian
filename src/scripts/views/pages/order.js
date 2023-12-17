@@ -65,11 +65,12 @@ const Order = {
 
     this.sendWhatsApp = function () {
       if (validateForm()) {
-        const phonenumber = '+6281937369031';
+        const phonenumber = '+6285648051529';
 
         const name = document.querySelector('.name').value;
         const tanggalPemesanan = document.querySelector('.tanggalPemesanan').value;
         const tanggalPengembalian = document.querySelector('.tanggalPengembalian').value;
+        const namaKesenian = document.querySelector('.namaKesenian').value;
         const alamatEmail = emailInput.value;
         const alamat = document.querySelector('.alamat').value;
         const message = document.querySelector('.message').value;
@@ -87,6 +88,7 @@ const Order = {
             + `*Tanggal Pemesanan:* ${tanggalPemesanan}%0a`
             + `*Tanggal Pengembalian:* ${tanggalPengembalian}%0a`
             + `*Alamat Email:* ${alamatEmail}%0a`
+            + `*Nama kesenian:* ${namaKesenian}%0a`
             + `*Harga:* Rp ${formattedHarga} /hari%0a`
             + `*Alamat:* ${alamat}%0a`
             + `*Keterangan:* ${message}%0a%0a`
